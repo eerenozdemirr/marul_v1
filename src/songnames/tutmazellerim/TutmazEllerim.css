@@ -1,0 +1,63 @@
+/* TutmazEllerim.css */
+.tutmaz-ellerim-page {
+    background-image: url('tutmaz-ellerim-background.PNG');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100vh;
+    width: 100vw;
+    position: relative;
+    background-size: 110%;
+}
+
+/* Videoya götüren alan */
+.highlight-area {
+    position: absolute;
+    top: 55%; /* Konumu ihtiyaca göre ayarlayın */
+    left: 40%;
+    width: 120%; /* Boyutları ihtiyaca göre ayarlayın */
+    height: 15%;
+    background-color: rgba(0, 0, 255, 0); /* Mavi, yarı saydam arka plan */
+    transform: translate(-50%, -50%);
+    z-index: 1; /* Videonun ve diğer öğelerin altında kalması için */
+    border-radius: 10px; /* Köşeleri yuvarlatma */
+}
+
+.coordinates-display {
+    position: absolute; /* Koordinatları gösterecek alanı konumlandır */
+    top: 1000%; /* Sayfanın üst kısmında konumlandır */
+    left: 50%; /* Yatayda ortalar */
+    transform: translateX(-50%); /* Gerçek ortalama için kaydır */
+    color: white; /* Koordinat metni rengi */
+    font-size: 20px; /* Font boyutu */
+    z-index: 2; /* Diğer öğelerin üstünde kalması için */
+}
+
+.video-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 3; /* Diğer öğelerin üstünde kalması için */
+}
+
+/* Spotify, YouTube ve Apple Music logoları için stil ayarları */
+.tutmaz-ellerim-logos {
+    position: absolute;
+    bottom: 5%; /* Logoların alt kısmındaki konumu */
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 20px; /* Logolar arasındaki boşluk */
+    z-index: 2; /* Diğer öğelerin üstünde kalması için */
+}
+
+.tutmaz-ellerim-logo {
+    width: 40px; /* Logo genişliği */
+    height: auto; /* Oranı korumak için otomatik yükseklik */
+    transition: transform 0.3s; /* Hover animasyonu için geçiş */
+}
+
+.tutmaz-ellerim-logo:hover {
+    transform: scale(1.1); /* Hover sırasında logonun boyutunu büyüt */
+}

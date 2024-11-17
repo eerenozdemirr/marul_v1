@@ -1,0 +1,316 @@
+.yuksegim-page {
+    background-image: url('yuksegim-background.PNG');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100vh;
+    width: 100vw;
+    position: relative;
+    margin-top: -30px;
+    animation: fadeIn 1s ease-in-out; /* Fade in animasyonu */
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0; /* Başlangıçta görünmez */
+    }
+    to {
+        opacity: 1; /* Tamamen görünür */
+    }
+}
+
+/* Bölge alanları */
+.region {
+    position: absolute;
+    opacity: 0.5; /* Opaklık */
+}
+
+/* Birinci bölge */
+.first-region {
+    top: 39.7vh; 
+    left: 10.5vw; 
+    width: 18.6vw; 
+    height: 8.6vh; 
+    background-color: rgba(255, 0, 0, 0); 
+}
+
+/* İkinci bölge */
+.second-region {
+    top: 42.9vh; 
+    left: 40.7vw; 
+    width: 16.3vw; 
+    height: 8.6vh; 
+    background-color: rgba(0, 255, 0, 0); 
+}
+
+/* Üçüncü bölge */
+.third-region {
+    top: 42.9vh; 
+    left: 62.8vw; 
+    width: 20.9vw; 
+    height: 12.9vh; 
+    background-color: rgba(0, 0, 255, 0); 
+}
+
+/* Dördüncü bölge */
+.fourth-region {
+    top: 53.6vh; 
+    left: 34.8vw; 
+    width: 22.1vw; 
+    height: 10.8vh; 
+    background-color: rgba(255, 255, 0, 0); 
+}
+
+/* Fotoğrafın ayarları - Birinci bölge için alp.PNG */
+.photo-in-region-alp {
+    position: absolute;
+    top: 32vh; 
+    left: 5vw; 
+    width: 120px; 
+    height: auto; 
+    animation: fade 1s linear infinite; 
+}
+
+/* Fotoğrafın ayarları - İkinci bölge için sena.PNG */
+.photo-in-region-sena {
+    position: absolute;
+    top: 35vh; 
+    left: 35vw; 
+    width: 120px; 
+    height: auto; 
+    animation: fade 1250ms linear infinite; 
+}
+
+/* Fotoğrafın ayarları - Üçüncü bölge için emre.PNG */
+.photo-in-region-emre {
+    position: absolute;
+    top: 32vh; 
+    left: 55vw; 
+    width: 160px; 
+    height: auto; 
+    animation: fade 1s linear infinite; 
+}
+
+/* Fotoğrafın ayarları - Dördüncü bölge için eren.PNG */
+.photo-in-region-eren {
+    position: absolute;
+    top: 40vh; 
+    left: 22vw; 
+    width: 180px; 
+    height: auto; 
+    animation: fade 1.4s linear infinite; 
+}
+
+.video {
+    width: 100%; /* Videonun genişliğini ayarlayabilirsiniz */
+    margin-left: -0%; /* Videoyu sola kaydırmak için negatif margin */
+    margin-top: 10px; /* Üstten biraz boşluk ekleyebilirsiniz */
+}
+
+.loading-spinner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Tam ekran */
+    font-size: 24px; /* Yükleme yazısı boyutu */
+    font-weight: bold;
+    color: #333;
+}
+
+.loading-spinner::after {
+    content: '';
+    display: block;
+    width: 40px;
+    height: 40px;
+    border: 5px solid #ccc;
+    border-top-color: #333;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes fade {
+    0% {
+        transform: rotate(0deg) scale(1); 
+    }
+    50% {
+        transform: rotate(180deg) scale(10); 
+    }
+    100% {
+        transform: rotate(360deg) scale(1); 
+    }
+}
+
+/* Müzik logoları */
+.yuksegim-music-links {
+    position: absolute;
+    bottom: 20px; /* Alt kısımdan biraz boşluk */
+    left: 50%; /* Ortalamak için */
+    transform: translateX(-50%); /* Tam ortalamak için */
+    display: flex;
+    gap: 10px; /* Logolar arasındaki boşluk */
+}
+
+.music-logo {
+    width: 50px; /* Logo boyutu */
+    height: auto; /* Orantılı boyut */
+    transition: transform 0.2s; /* Hover efekti için geçiş */
+}
+
+.music-logo:hover {
+    transform: scale(1.1); /* Hover'da büyütme efekti */
+}
+
+
+.notepad-container {
+    position: fixed;
+    top: 40%;
+    left: 48%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    max-width: 500px;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+}
+
+.notepad-textarea {
+    width: 100%;
+    height: 500px;
+    padding: 10px;
+    font-size: 16px;
+    border: 5px solid #25723b;
+    border-radius: 20px;
+    resize: none;
+    outline: none;
+    background-color: rgb(252, 243, 227);
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.1) 1px, transparent 1px);
+    background-size: 100% 24px;
+}
+
+
+/* Tarih ve Gönder Butonu için */
+.notepad-header {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 10px;
+}
+
+.notepad-date {
+    font-size: 14px;
+    color: #1c5d14;
+    background-color: rgb(252, 243, 227);
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.notepad-submit-button {
+    display: block;
+    margin-top: 10px;
+    padding: 10px 80px;
+    margin-left: 25%;
+    font-size: 16px;
+    color: white;
+    background-color: #25723b;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.notepad-submit-button:hover {
+    background-color: #1e5a30;
+}
+
+
+.note-dates-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 20px;
+}
+
+.note-date-button {
+    padding: 10px;
+    background-color: #25723b;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.note-date-button:hover {
+    background-color: #1e5a30;
+}
+
+
+.password-prompt {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+    z-index: 1100;
+}
+
+.password-prompt input {
+    padding: 10px;
+    font-size: 16px;
+    margin-top: 10px;
+    border-radius: 8px;
+    border: 2px solid #25723b;
+    width: 80%;
+    max-width: 300px;
+}
+
+.password-prompt button {
+    margin-top: 15px;
+    padding: 10px 30px;
+    background-color: #25723b;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.password-prompt button:hover {
+    background-color: #1e5a30;
+}
+
+
+.fetch-notes-button {
+    display: block;
+    margin-top: 10px;
+    padding: 10px 70px;
+    margin-left: 25%;
+    font-size: 12px;
+    color: white;
+    background-color: #25723b;
+    border: none;
+    border-radius: 10px 10px 20px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+
+.note-item {
+    background-color: rgba(0, 0, 0, 0.1); /* Şeffaf siyah arka plan */
+    padding: 10px; /* İçerik ile kenar arasında boşluk */
+    margin-bottom: 10px; /* Öğeler arasındaki boşluk */
+    border-radius: 8px; /* Köşeleri yuvarlat */
+}

@@ -1,0 +1,37 @@
+.dur-page {
+    background-image: url('dur-background.PNG'); /* Arka plan resmi için doğru yolu kullanın */
+    background-size: cover; /* Arka planı kaplayacak şekilde ayarlama */
+    background-repeat: no-repeat; /* Arka planın tekrar etmesini engelle */
+    background-position: center; /* Arka planı merkezde konumlandır */
+    height: 100vh; /* Tam ekran yüksekliği */
+    width: 100vw; /* Tam ekran genişliği */
+    position: relative; /* İçindeki öğeleri konumlandırmak için gerekli */
+    transition: background-image 0.5s ease; /* Arka plan geçişi için animasyon */
+}
+
+.new-image {
+    position: absolute; /* Yeni görseli sayfanın üstünde göstermek için */
+    top: 0;
+    left: 0;
+    width: 100%; /* Tam genişlik */
+    height: 100%; /* Tam yükseklik */
+    background-size: cover; /* Görseli tam ekran yapacak şekilde ayarla */
+    background-position: center; /* Görselin merkezde konumlanması */
+    z-index: 1; /* Eski görselin üstünde kalması için */
+}
+
+
+.music-links {
+    position: fixed;  /* Sayfanın altına sabitle */
+    top: 20px;
+    width: 100%;  /* Tüm genişliği kaplasın */
+    display: flex;
+    justify-content: center;  /* Ortala */  /* Arka plan rengi ekle, isteğe bağlı */
+    padding: 10px 0;  /* Üst ve alt boşluk */
+}
+
+.music-logo {
+    width: 40px;  /* Logo boyutu */
+    margin: 0 15px;  /* Logolar arasında boşluk bırak */
+    cursor: pointer;  /* Üzerine gelindiğinde el ikonu */
+}

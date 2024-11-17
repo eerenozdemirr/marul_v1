@@ -1,0 +1,56 @@
+.aldirma-page {
+    background-image: url('aldirma-background.PNG'); /* Arka plan resmini buraya ekleyin */
+    background-size: cover; /* Arka planı kaplayacak şekilde ayarlama */
+    background-repeat: no-repeat; /* Arka planın tekrar etmesini engelle */
+    background-position: center; /* Arka planı merkezde konumlandır */
+    height: 100vh; /* Tam ekran yüksekliği */
+    width: 100vw; /* Tam ekran genişliği */
+    opacity: 0; /* Başlangıçta görünmez */
+    transition: opacity 1s ease, background-image 0.5s ease-in-out; /* Opaklık ve arka plan geçişi için animasyon */
+    background-size: 100%;
+    overflow: hidden; /* Kaydırmayı kaldır */
+}
+
+/* Arka plan gösterildiğinde opaklık 1 olacak */
+.aldirma-page.show {
+    opacity: 1; /* Görünür hale gelir */
+}
+
+.aldirma-music-links {
+    position: fixed;  /* Sayfanın altına sabitle */
+    bottom: 0;  /* Ekranın altına yapıştır */
+    width: 100%;  /* Tüm genişliği kaplasın */
+    display: flex;
+    justify-content: center;  /* Ortala */
+    padding: 10px 0;  /* Üst ve alt boşluk */
+    z-index: 1000;  /* Diğer içeriklerin üstünde görünmesi için z-index */
+}
+
+.music-logo {
+    position: relative;
+    width: 40px;  /* Logo boyutu */
+    margin: 0 15px;  /* Logolar arasında boşluk bırak */
+    cursor: pointer;  /* Üzerine gelindiğinde el ikonu */
+}
+
+/* Butonlar için stil */
+.aldirma-buttons {
+    position: absolute;
+    top: 85%; /* Sayfanın ortasına yerleştir */
+    left: 30%; /* Sayfanın ortasına yerleştir */
+    transform: translate(-50%, -50%); /* Ortalamak için translate kullan */
+    display: flex;
+    justify-content: space-between;
+    width: 250px; /* Butonların kapsayıcı genişliği */
+}
+
+.background-button {
+    width: 200px; /* Butonların genişliği */
+    height: 100px; /* Butonların yüksekliği */
+    cursor: pointer; /* Buton üzerine gelindiğinde el işareti */
+    transition: transform 0.3s ease; /* Hover efektinde animasyon */
+}
+
+.background-button:hover {
+    transform: scale(1.1); /* Üzerine gelindiğinde buton büyür */
+}

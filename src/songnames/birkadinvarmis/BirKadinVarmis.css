@@ -1,0 +1,62 @@
+.birkadinvarmis-page {
+    background-size: cover; /* Arka planı kaplayacak şekilde ayarlama */
+    background-repeat: no-repeat; /* Arka planın tekrar etmesini engelle */
+    background-position: center; /* Arka planı merkezde konumlandır */
+    height: 100vh; /* Tam ekran yüksekliği */
+    width: 100vw; /* Tam ekran genişliği */
+    opacity: 0; /* Başlangıçta görünmez */
+    transition: opacity 1s ease; /* Opaklık geçişi için animasyon */
+    background-size: 110%;
+}
+
+/* Arka plan gösterildiğinde opaklık 1 olacak */
+.birkadinvarmis-page.show {
+    opacity: 1; /* Görünür hale gelir */
+}
+
+.clickable-image {
+    position: absolute; /* Ortada konumlandırmak için absolute kullan */
+    top: 60%; /* Dikey olarak ortala */
+    left: 50%; /* Yatay olarak ortala */
+    width: 50%;
+    transform: translate(-50%, -50%); /* Gerçekten ortalamak için offset uygula */
+    cursor: pointer; /* Üzerine gelindiğinde el ikonu */
+    transition: opacity 0.5s ease; /* Kaybolma animasyonu */
+}
+
+.clickable-image:not(:hover) {
+    opacity: 1; /* Başlangıçta görünür */
+}
+
+/* Tıklanınca kaybolma durumu */
+.clickable-image.hidden {
+    opacity: 0; /* Kaybolması için opaklığı sıfırla */
+}
+
+.birkadinvarmis-music-links {
+    position: fixed;  /* Sayfanın altına sabitle */
+    bottom: 0;  /* Ekranın altına yapıştır */
+    width: 100%;  /* Tüm genişliği kaplasın */
+    display: flex;
+    justify-content: center;  /* Ortala */
+    padding: 10px 0;  /* Üst ve alt boşluk */
+ /* İsteğe bağlı: arka plan rengi */
+    z-index: 1000;  /* Diğer içeriklerin üstünde görünmesi için z-index */
+}
+
+.music-logo {
+    width: 40px;  /* Logo boyutu */
+    margin: 0 15px;  /* Logolar arasında boşluk bırak */
+    cursor: pointer;  /* Üzerine gelindiğinde el ikonu */
+}
+
+
+.new-sound-button {
+    position: absolute; /* Ortada konumlandırmak için absolute kullan */
+    bottom: 73%; /* Dikey olarak konumlandır */
+    left: 47%; /* Yatay olarak ortala */
+    transform: translate(-50%, -50%); /* Gerçekten ortalamak için offset uygula */
+    width: 150px; /* Buton boyutu */
+    cursor: pointer; /* Üzerine gelindiğinde el ikonu */
+    transition: opacity 0.5s ease; /* Kaybolma animasyonu */
+}

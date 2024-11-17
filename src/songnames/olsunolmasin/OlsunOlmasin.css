@@ -1,0 +1,123 @@
+/* OlsunOlmasin.css */
+.olsunolmasin-page {
+    background-image: url('olsunolmasin-background.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100vh;
+    width: 100vw;
+    opacity: 0;
+    transition: opacity 1s ease;
+    position: relative;
+}
+
+.olsunolmasin-page.show {
+    opacity: 1;
+}
+
+
+.toggle-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    z-index: 1;
+    display: none;
+}
+
+.toggle-image.visible {
+    display: block;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+
+video {
+    width: auto;
+    height: 100%;
+    max-width: 100%;
+    object-fit: cover;
+    transform: rotate(0deg);
+}
+
+/* Spotify, YouTube ve Apple Music logoları için stil ayarları */
+.olsunolmasin-logos {
+    position: absolute;
+    bottom: 5%; /* Logoların alt kısmındaki konumu */
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 20px; /* Logolar arasındaki boşluk */
+    z-index: 3; /* Diğer öğelerin üstünde kalması için */
+}
+
+.olsunolmasin-logo {
+    width: 40px; /* Logo genişliği */
+    height: auto; /* Oranı korumak için otomatik yükseklik */
+    transition: transform 0.3s; /* Hover animasyonu için geçiş */
+}
+
+.olsunolmasin-logo:hover {
+    transform: scale(1.1); /* Hover sırasında logonun boyutunu büyüt */
+}
+
+
+/* Sayfanın sol ve sağ bölümlerini ayıran kutucuklar */
+.left-zone {
+    position: absolute;
+    top: 30%; /* En üstten başlar */
+    left: 10%;
+    width: 40%; /* Sol yarı */
+    height: 40vh; /* Tam yükseklik */
+    background-color: rgba(0, 0, 255, 0); /* Mavi opak */
+    z-index: 5; /* Daha yüksek z-index */
+    cursor: pointer; /* Tıklanabilir */
+}
+
+.right-zone {
+    position: absolute;
+    top: 30%; /* En üstten başlar */
+    right: 10%;
+    width: 40%; /* Sağ yarı */
+    height: 40vh; /* Tam yükseklik */
+    background-color: rgba(255, 0, 0, 0); /* Kırmızı opak */
+    z-index: 5; /* Daha yüksek z-index */
+    cursor: pointer; /* Tıklanabilir */
+}
+
+/* Diğer üstteki öğelere pointer-events ayarı */
+.handwritten-text {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 60%;
+    max-width: 800px;
+    z-index: 3; /* Daha düşük z-index */
+    pointer-events: none; /* Tıklanmayı engelle */
+}
+
+.video-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 4; /* Video sırasında üstte olacak */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    pointer-events: none; /* Tıklanmayı engelle */
+}

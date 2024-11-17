@@ -1,0 +1,52 @@
+/* Kacma.css */
+
+.kacma-page {
+    background-image: url('kacma-background.PNG'); /* Arka plan resmi için doğru yolu kullanın */
+    background-size: contain; 
+    background-repeat: no-repeat; 
+    background-position: center; 
+    height: 100vh; 
+    width: 100vw; 
+    opacity: 0; 
+    transition: opacity 1s ease; 
+    background-size: 120%;
+}
+
+.kacma-page.show {
+    opacity: 1; 
+}
+
+.play-button {
+    position: absolute;
+    top: 72%;
+    left: 38%;
+    width: 120px; 
+    height: 80px; 
+    cursor: pointer;
+    transition: transform 3s;
+    transform: rotate(-0deg);
+}
+
+.play-button:hover {
+    transform: scale(1.4); 
+}
+
+/* Logo stil ayarları */
+.logos {
+    position: absolute;
+    bottom:5%; /* Logoların alt kısımdaki konumu */
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 20px; /* Logolar arasındaki boşluk */
+}
+
+.logo {
+    width: 40px; /* Logo genişliği */
+    height: auto; /* Oranı korumak için otomatik yükseklik */
+    transition: transform 0.3s; /* Hover animasyonu için geçiş */
+}
+
+.logo:hover {
+    transform: scale(1.1); /* Hover sırasında logonun boyutunu büyüt */
+}

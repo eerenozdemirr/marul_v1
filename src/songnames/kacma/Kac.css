@@ -1,0 +1,145 @@
+.start-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.start-button {
+  width: 35%; /* Butonun genişliği ekran genişliğinin yüzdesi olarak ayarlandı */
+  height: auto; /* Oranını korumak için otomatik yükseklik */
+  cursor: pointer;
+  display: block;
+  margin: auto;
+}
+
+.restart-button {
+  width: 35%; /* Tekrar oyna butonu için genişlik */
+  height: auto;
+  cursor: pointer;
+  display: block;
+  margin: 0 auto;
+}
+
+.game-area {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background-image: url('/Users/erenozdemir/album-promotion/src/songnames/kacma/kac-background.png'); 
+  background-size: cover;
+  background-position: center;
+}
+
+.dino {
+  position: absolute;
+  bottom: 25%; /* Ekranın altından yüzdeye göre yukarı taşıma */
+  left: 25%; /* Konumu sola göre yüzde ile ayarlanmış */
+  width: 20%; /* Dino boyutu ekran genişliğinin yüzde 10'u olarak ayarlanmış */
+  height: auto; /* Otomatik oran */
+}
+
+.dino-image {
+  width: 100%; 
+  height: auto; /* Yükseklik oranını koruyoruz */
+}
+
+.left-image {
+  position: absolute;
+  bottom: 25%; /* Ekranın altından yüzdeye göre yukarı taşıma */
+  left: 0%; /* Sol konumu yüzdelik olarak */
+  width: 25%; /* Görsel genişliği */
+  height: auto; 
+}
+
+.left-image-content {
+  width: 100%; 
+  height: auto;
+}
+
+.dino.jump {
+  bottom: 35%; /* Zıplama sırasında dinozorun hareket yüksekliği */
+}
+
+.obstacle {
+  position: absolute;
+  bottom: 24%;
+  width: 10%; /* Engel genişliği ekran genişliğinin yüzde 4'ü */
+  height: auto; 
+  transition: left 0.1s linear;
+}
+
+.obstacle-image {
+  width: 100%; 
+  height: auto;
+}
+
+.score {
+  position: absolute;
+  top: 2%;
+  left: 2%;
+  font-size: 6vw; /* Ekran genişliğine göre font boyutu */
+}
+
+.game-over {
+  position: absolute;
+  top: 50%;
+  left: 55%;
+  transform: translate(-50%, -50%);
+  font-size: 6vw; /* Yazı boyutu ekran genişliğine göre */
+  color: white;
+}
+
+.restart-button {
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 1.5vw; /* Buton yazı boyutu yüzde ile */
+}
+
+
+
+.game-over-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.game-over-image {
+  width: 300px; /* Görselin genişliği */
+  height: auto; /* Görselin orantılı olarak boyutlanması */
+  margin-bottom: 20px; /* Skor ile görsel arasındaki boşluk */
+}
+
+
+
+.nick-input-container {
+  position: absolute;
+  top: 5%; /* Yukarıdan %5 boşluk bırak */
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center; /* Ortalansın */
+  z-index: 10; /* Diğer elemanların üstünde gözükmesi için */
+}
+
+.nick-input-container input {
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.nick-input-container button {
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.nick-input-container button:hover {
+  background-color: #45a049;
+}
